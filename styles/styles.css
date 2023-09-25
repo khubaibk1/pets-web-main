@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Fredoka', sans-serif;
+}
+
+body{
+  overflow-x: hidden;
+}
+.menuIcon {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menuIcon .bar {
+  background-color: black; 
+  height: 2px;
+  width: 100%;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.menuIcon.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.menuIcon.active .bar:nth-child(2) {
+  transform: translateX(180%);
+  opacity: 50%;
+  
+  
+}
+
+.menuIcon.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-7px, -6px);
+}
+
+.menuIcon .bar {
+  background-color: black;
+}
+.active {
+  background-color: #54BDB5;
+  color: white;
+}
+.arrowbtn{
+  background-color:#D9D9D9;
+  border-radius: 9999px;
+  padding: 0.5rem;
+ 
+  margin-left: 15px; 
+}
+
+.arrowbtn:hover{
+  background-color: #54BDB5;
+  color:white;
+}
+.btnTransform{
+  transform: translateX(-28px);
+  margin-top: 10px;
+}
+.divTransform{
+  transform: translateX(-40px);
+  
+}
+.fl{
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-around;
+  
+}

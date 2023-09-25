@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Add a CSS class for the active button */
+        .active-button {
+            background-color: #54BDB5;
+        }
+    </style>
+</head>
+<body>
+    <div class="items-center max-w-screen-xl px-5 mx-auto w-full">
+        <div class="flex h-[70px] w-full justify-between items-center bg-transparent">
+            <!-- Left -->
+            <div class="flex items-center z-20">
+                <!-- Logo -->
+                <a href="/" class="text-[36px] font-[600] text-[rgb(84,189,181)]">
+                    <img src="/images/logo.jpg" alt="" class="w-[100px] md:w-[150px]" />
+                </a>
+            </div>
+            <div>
+                <ul class="cont hidden md:flex text-base text-black font-[400] text-[18px]">
+                    <li>
+                        <button onclick="handleButtonClick('Home')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                            <p class="a">Home</p>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="handleButtonClick('About Us')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                            <p class="a">About Us</p>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="handleButtonClick('Cats')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                            <p class="a">Cats</p>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="handleButtonClick('Dogs')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                            <p class="a">Dogs</p>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="handleButtonClick('Birds')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                            <p class="a">Birds</p>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="handleButtonClick('Fish')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                            <p class="a">Fish</p>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="handleButtonClick('Small Animals')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                            <p class="a">Small Animals</p>
+                        </button>
+                    </li>
+                    <!-- Add similar buttons for other menu items -->
+                </ul>
+            </div>
+            <!-- Right -->
+            <div class="hidden md:flex items-center gap-10">
+                <!-- Sign In -->
+                <div class="relative flex items-center gap-2">
+                    <input type="text" class="py-3 px-3 focus:outline-none border rounded-md border-[#54BDB56E]" placeholder="Search by name" />
+                    <button class="flex items-center text-center rounded-md bg-[#54BDB5] text-white w-[104px] h-[50px] font-[400] px-7">
+                        Search
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu Icon -->
+            <div onclick="handleNavbar()" class="sm:block md:hidden cursor-pointer flex items-center z-50">
+                <i class="fas fa-bars" style="font-size: 31px;"></i>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden z-40 fixed top-0 right-0 shadow-md overflow-hidden bottom-0 flex justify-start items-start py-20 px-5 w-80 h-screen bg-white text-black text-right ease-linear duration-200 transform translate-x-0 mobile-menu hidden">
+                <div class="flex flex-col mt-[-3.5rem]">
+                    <div class="flex flex-col basis-[50%]">
+                        <ul class="flex flex-col justify-start items-start gap-5 text-xl font-[500] mt-3">
+                            <li>
+                                <button onclick="handleButtonClick('Home')" class="li text-[18px] z-20">
+                                    <p onclick="closeMenu()" class="a">Home</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button onclick="handleButtonClick('About Us')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                                    <p class="a">About Us</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button onclick="handleButtonClick('Cats')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                                    <p class="a">Cats</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button onclick="handleButtonClick('Dogs')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                                    <p class="a">Dogs</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button onclick="handleButtonClick('Birds')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                                    <p class="a">Birds</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button onclick="handleButtonClick('Fish')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                                    <p class="a">Fish</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button onclick="handleButtonClick('Small Animals')" class="li bg-transparent text-[16px] z-20 h-full py-6 px-6">
+                                    <p class="a">Small Animals</p>
+                                </button>
+                            </li>
+                            <!-- Add similar buttons for other menu items -->
+                        </ul>
+                        <div class="flex flex-col justify-center items-center gap-y-6 mt-5">
+                            <!-- Sign In -->
+                            <div class="relative flex flex-col items-center justify-center ml-3 gap-2">
+                                <input type="text" class="py-3 px-3 focus:outline-none border rounded-md border-[#54BDB56E] w-[260px]" placeholder="Search by name" />
+                                <button onclick="closeMenu()" class="flex items-center text-center rounded-md bg-[#54BDB5] text-white w-[104px] h-[50px] font-[400] px-7">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="/images/paw1.png" alt="" class="w-[71px] opacity-30 absolute left-10 top-52">
+    <div class="container mx-auto">
+        <div class="">
+            <div class="flex flex-col md:flex-row py-[4rem]">
+                <div class="p-4">
+                    <h1 class="text-[32px] md:text-[55px] font-[600] md:tracking-wider flex md:flex-row flex-col md:mb-0 mb-[3rem]">
+                        <span class='text-[#54BDB5] '>  Contact us!</span>
+                        <img src="/images/lines.png" alt="" class="w-[35px] object-contain mt-[-4rem] md:mt-[-3rem] md:ml-0 ml-[10rem]">
+                    </h1>
+                    <p class="mb-2">
+                        Fill the form below or write us. We will help you as soon as possible.
+                    </p>
+                    <div class="flex flex-col md:flex-row mt-7">
+                        <div style="background: linear-gradient(112deg, #FFF9F1 -2.36%, #FFF9F1 8.3%, #FFF9F1 65.19%, #FFF9F1 82.97%);" class="mb-4 md:mr-5 flex flex-col items-center px-10 py-5">
+                            <div class="border border-[#1A9CDA] rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#1A9CDA" viewBox="0 0 32 32" width="32px" height="32px"><path d="M20.013 2c1.115 0 2.172 0.436 2.966 1.23l6.758 6.753c0.791 0.791 1.228 1.848 1.228 2.966 0 2.492-2.542 7.006-7.037 11.507l-8.936 8.937c-3.93 3.931-7.871 4.493-8.564 4.493-0.496 0-0.896-0.2-1.235-0.536-0.413-0.413-0.545-0.997-0.358-1.579l1.951-7.285c0.082-0.303 0.222-0.579 0.415-0.822l7.306-7.309c0.025-0.025 0.053-0.045 0.079-0.071 3.502-3.496 8.019-7.035 11.509-7.035z M20.001 4h0.012l-8.966 8.957c-0.204 0.203-0.442 0.364-0.703 0.472l-5.85 2.019 2.019-5.853 0.471-0.703 8.956-8.967v0.012z M15.192 12.3c-0.78 0.781-2.049 0.781-2.83 0-0.78-0.78-0.78-2.049 0-2.828 0.781-0.781 2.049-0.781 2.83 0 0.78 0.781 0.78 2.048 0 2.828z M20.012 6l-7.95 7.949c-0.203 0.203-0.362 0.442-0.471 0.703l-2.019 5.854 5.855-2.019c0.261-0.107 0.5-0.268 0.703-0.471l7.949-7.949v-0.012z"></path></svg>
+                            </div>
+                            <h1 class="text-[24px] font-[500]">Phone</h1>
+                            <p class="px-4 pt-4">+1 (234) 567 8900</p>
+                        </div>
+                        <div style="background: linear-gradient(112deg, #FFF9F1 -2.36%, #FFF9F1 8.3%, #FFF9F1 65.19%, #FFF9F1 82.97%);" class="mb-4 flex flex-col items-center px-16 py-5">
+                            <div class="border border-[#1A9CDA] rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#1A9CDA" viewBox="0 0 32 32" width="32px" height="32px"><path d="M16 2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 20h-2v-2h2v2zm0-4h-2v-6h2v6z"></path></svg>
+                            </div>
+                            <h1 class="text-[24px] font-[500]">Email</h1>
+                            <p>info@pets.com</p>
+                            <p>sales@pets.com</p>
+                        </div>
+                    </div>
+                    <div style="background: linear-gradient(112deg, #FFF9F1 -2.36%, #FFF9F1 8.3%, #FFF9F1 65.19%, #FFF9F1 82.97%);" class="py-7 px-6">
+                        <div class="mb-5 mx-4">
+                            <div class="flex items-start">
+                                <div class="border border-[#1A9CDA] rounded-full p-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1A9CDA" viewBox="0 0 32 32" width="32px" height="32px"><path d="M16 2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 20h-2v-2h2v2zm0-4h-2v-6h2v6z"></path></svg>
+                                </div>
+                                <div class="ml-3">
+                                    <h1 class="text-[24px] font-[500]">Address</h1>
+                                    <p class="text-[#777777] font-[16px]">4517 USA</p>
+                                    <p class="text-[#777777]">Road 2342, Street 39495</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Google Map Snippet -->
+                        <iframe width="100%" height="160" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.7458343438157!2d-74.00659181231141!3d40.71277628238072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7e2651687b1e66e1!2sStatue%20of%20Liberty!5e0!3m2!1sen!2sus"></iframe>
+                    </div>
+                </div>
+                <div style="background: linear-gradient(112deg, #FFF9F1 -2.36%, #FFF9F1 8.3%, #FFF9F1 65.19%, #FFF9F1 82.97%);" class="flex-grow py-[1rem]  px-[2rem]">
+                    <h1 class="text-[32px] text-center font-[600] my-5">
+                        Get in Touch
+                    </h1>
+                    <form>
+                        <div class="mb-3">
+                            <label class="block text-[#000000] font-[16px] mb-1" for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" class="w-full border focus:outline-none border-[#D1D5DB] rounded-md p-2" placeholder="James Williams">
+                        </div>
+                        <div class="mb-3">
+                            <label class="block text-[#000000] font-[16px] mb-1" for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full border focus:outline-none border-[#D1D5DB] rounded-md p-2" placeholder="JamesWilliams@email.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="block text-[#000000] font-[16px] mb-1" for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full border focus:outline-none border-[#D1D5DB] rounded-md p-2" placeholder="Subject Here">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-[#000000] font-[16px] mb-1" for="message">Message</label>
+                            <textarea id="message" name="message" class="w-full border focus:outline-none border-[#D1D5DB] rounded-md p-2 h-32" placeholder="Type Message Here" style="resize: none;"></textarea>
+                        </div>
+                        <button type="submit" class="bg-[#54BDB5] text-white px-4 py-3 rounded-md hover:bg-[##A51F6C] w-full">Send Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="/images/paw1.png" alt="" class="w-[71px] opacity-30 absolute right-10 top-[30rem]">
+    <div style="background: linear-gradient(112deg, #FFF9F1 -2.36%, #FFF9F1 8.3%, #FFF9F1 65.19%, #FFF9F1 82.97%)" class="flex flex-col justify-center py-20 items-center gap-5 bg-[]">
+        <a href="/" class="text-2xl font-semibold text-[rgb(84,189,181)]">
+            <img src="/images/logo.jpg" alt="" class="w-24 md:w-36" />
+        </a>
+        <ul class="flex items-center gap-4">
+            <a href="">
+                <li>
+                    About
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    Contact us
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    Privacy & Policy
+                </li>
+            </a>
+        </ul>
+        <div class="flex gap-2 items-center cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="138" height="30" viewBox="0 0 138 30" fill="none">
+                <circle cx="15" cy="15" r="15" fill="#54BDB5" fill-opacity="0.08" />
+                <path d="M16.5 16.125H18.375L19.125 13.125H16.5V11.625C16.5 10.8525 16.5 10.125 18 10.125H19.125V7.605C18.8805 7.57275 17.9572 7.5 16.9822 7.5C14.946 7.5 13.5 8.74275 13.5 11.025V13.125H11.25V16.125H13.5V22.5H16.5V16.125Z" fill="#54BDB5" />
+                <circle cx="51" cy="15" r="15" fill="#54BDB5" fill-opacity="0.08" />
+                <circle cx="123" cy="15" r="15" fill="#54BDB5" fill-opacity="0.08" />
+                <path d="M58.0866 11.0855C57.5686 11.3147 57.0193 11.4652 56.4568 11.5321C57.0494 11.1772 57.4928 10.619 57.7044 9.96141C57.1478 10.2927 56.5376 10.5248 55.9022 10.6504C55.475 10.1933 54.9087 9.89011 54.2914 9.78804C53.6741 9.68596 53.0404 9.79069 52.4887 10.0859C51.9371 10.3812 51.4985 10.8504 51.241 11.4207C50.9836 11.9909 50.9217 12.6303 51.0651 13.2393C49.9362 13.1828 48.8319 12.8896 47.8237 12.3785C46.8155 11.8675 45.9261 11.1501 45.2132 10.273C44.9609 10.7064 44.8283 11.199 44.829 11.7005C44.829 12.6847 45.3306 13.5543 46.0916 14.0634C45.6409 14.0492 45.2001 13.9274 44.8059 13.7084V13.743C44.8059 14.3986 45.0327 15.0341 45.4478 15.5416C45.8628 16.0491 46.4407 16.3974 47.0833 16.5274C46.6649 16.6409 46.2262 16.6576 45.8004 16.5763C45.9816 17.1406 46.3347 17.6342 46.8104 17.9878C47.2861 18.3414 47.8605 18.5373 48.4531 18.5482C47.8642 19.0108 47.1898 19.3527 46.4686 19.5544C45.7474 19.7561 44.9935 19.8137 44.25 19.7239C45.5477 20.5584 47.0583 21.0014 48.6011 21C53.8237 21 56.6788 16.674 56.6788 12.9223C56.6788 12.8001 56.676 12.6766 56.6706 12.5551C57.2261 12.1535 57.7056 11.6554 58.0866 11.0855Z" fill="#54BDB5" />
+                <circle cx="87" cy="15" r="15" fill="#54BDB5" fill-opacity="0.08" />
+                <path d="M87.3656 13.3892C86.8391 13.3892 86.3341 13.5983 85.9617 13.9707C85.5894 14.343 85.3802 14.8481 85.3802 15.3746C85.3802 15.9012 85.5894 16.4062 85.9617 16.7786C86.3341 17.1509 86.8391 17.3601 87.3656 17.3601C87.8922 17.3601 88.3972 17.1509 88.7696 16.7786C89.1419 16.4062 89.3511 15.9012 89.3511 15.3746C89.3511 14.8481 89.1419 14.343 88.7696 13.9707C88.3972 13.5983 87.8922 13.3892 87.3656 13.3892Z" fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M84.1706 9.92654C86.2941 9.69115 88.4372 9.69115 90.5607 9.92654C91.7209 10.0561 92.6562 10.9694 92.7924 12.1338C93.0442 14.287 93.0442 16.4623 92.7924 18.6156C92.6562 19.78 91.7209 20.6933 90.5613 20.8234C88.4376 21.0589 86.2943 21.0589 84.1706 20.8234C83.0104 20.6933 82.0751 19.78 81.9389 18.6162C81.687 16.4627 81.687 14.2872 81.9389 12.1338C82.0751 10.9694 83.0104 10.0561 84.1706 9.92654ZM90.4202 11.7092C90.2582 11.7092 90.1028 11.7735 89.9882 11.8881C89.8737 12.0027 89.8093 12.1581 89.8093 12.3201C89.8093 12.4821 89.8737 12.6375 89.9882 12.7521C90.1028 12.8666 90.2582 12.931 90.4202 12.931C90.5822 12.931 90.7376 12.8666 90.8522 12.7521C90.9668 12.6375 91.0311 12.4821 91.0311 12.3201C91.0311 12.1581 90.9668 12.0027 90.8522 11.8881C90.7376 11.7735 90.5822 11.7092 90.4202 11.7092ZM84.4638 15.3747C84.4638 14.6051 84.7695 13.867 85.3137 13.3228C85.8579 12.7786 86.596 12.4728 87.3656 12.4728C88.1353 12.4728 88.8734 12.7786 89.4176 13.3228C89.9618 13.867 90.2675 14.6051 90.2675 15.3747C90.2675 16.1443 89.9618 16.8824 89.4176 17.4266C88.8734 17.9708 88.1353 18.2765 87.3656 18.2765C86.596 18.2765 85.8579 17.9708 85.3137 17.4266C84.7695 16.8824 84.4638 16.1443 84.4638 15.3747Z" fill="#54BDB5" />
+                <path d="M119.838 10.6249C119.837 10.9564 119.706 11.2743 119.471 11.5086C119.236 11.7429 118.918 11.8744 118.587 11.8743C118.255 11.8741 117.938 11.7422 117.703 11.5077C117.469 11.2732 117.337 10.9552 117.338 10.6236C117.338 10.2921 117.47 9.97425 117.704 9.73994C117.939 9.50564 118.257 9.3741 118.588 9.37427C118.92 9.37443 119.238 9.50629 119.472 9.74083C119.706 9.97536 119.838 10.2934 119.838 10.6249ZM119.875 12.7999H117.375V20.6249H119.875V12.7999ZM123.825 12.7999H121.338V20.6249H123.8V16.5186C123.8 14.2311 126.781 14.0186 126.781 16.5186V20.6249H129.25V15.6686C129.25 11.8124 124.838 11.9561 123.8 13.8499L123.825 12.7999Z" fill="#54BDB5" />
+            </svg>
+        </div>
+        <p class="mt-16">
+            Design & Developed by
+            <a href=""> Khanstudio.co</a>
+        </p>
+    </div>
+    
+    <script>
+        // JavaScript function to handle button clicks
+        function handleButtonClick(page) {
+            // Remove the active class from all buttons
+            const buttons = document.querySelectorAll('.cont button');
+            buttons.forEach((button) => {
+                button.classList.remove('active-button');
+            });
+
+            // Add the active class to the clicked button
+            const clickedButton = document.querySelector(`button[onclick="handleButtonClick('${page}')"]`);
+            clickedButton.classList.add('active-button');
+        }
+
+        function handleNavbar() {
+    // Toggle the visibility of the mobile menu when the hamburger icon is clicked
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenu.classList.toggle("hidden");
+}
+
+function closeMenu() {
+    // Close the mobile menu when a menu item is clicked
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenu.classList.add("hidden");
+}
+
+        </script>
+</body>
+</html>
